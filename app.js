@@ -48,7 +48,7 @@ function render() {
     resultsGrid.innerHTML = state.items.map(item => `
       <div class="item-card">
         <div>
-          <h4>${item.title}</h4>
+          <h4>${item.name}</h4>
           <small>ID: #${item.id}</small>
         </div>
         <button class="btn-save" data-id="${item.id}">Save</button>
@@ -63,7 +63,7 @@ function render() {
     favsList.innerHTML = state.favorites.map(fav => `
       <div class="item-card">
         <div>
-          <h4>${fav.title}</h4>
+          <h4>${fav.name}</h4>
           <small>ID: #${fav.id}</small>
         </div>
         <button class="btn-remove" data-id="${fav.id}">Remove</button>
@@ -96,7 +96,7 @@ async function fetchItems(filterText = "") {
 
     // Filter or slice first 6-8 records
     const filtered = filterText
-      ? data.filter(item => item.title.toLowerCase().includes(filterText.toLowerCase())).slice(0, 8)
+      ? data.filter(item => item.name.toLowerCase().includes(filterText.toLowerCase())).slice(0, 8)
       : data.slice(0, 6);
 
     state.items = filtered;
