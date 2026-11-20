@@ -97,7 +97,7 @@ async function fetchItems(filterText = "") {
     // Filter or slice first 6-8 records
     const filtered = filterText
       ? data.filter(item => item.name.toLowerCase().includes(filterText.toLowerCase())).slice(0, 8)
-      : data.slice(0, data);
+      : data.slice(0, 6);
 
     state.items = filtered;
     state.loading = false;
