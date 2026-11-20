@@ -20,7 +20,7 @@ const statusMsg = document.querySelector("#status-msg");
 const resultsGrid = document.querySelector("#results-grid");
 const resultsCount = document.querySelector("#results-count");
 const favsList = document.querySelector("#favs-list");
-const favsCount = document.querySelector("#favs-count");
+const favCounter = document.querySelector("#fav-counter");
 
 // ==========================================
 // 3. RENDER FUNCTION (Milestone 2)
@@ -39,7 +39,7 @@ function render() {
 
   // B. Update Count Badges
   resultsCount.textContent = `${state.items.length} items`;
-  favsCount.textContent = `${state.favorites.length} saved`;
+  favCounter.textContent = `${state.favorites.length} saved`;
 
   // C. Render Search Results List
   if (state.items.length === 0 && !state.loading) {
