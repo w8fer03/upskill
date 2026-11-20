@@ -81,7 +81,7 @@ async function fetchItems(filterText = "") {
   render();
 
   try {
-    const url = "[suspicious link removed]";
+    const url = "https://typicode.com";
     
     // Step 1: Send request
     const response = await fetch(url);
