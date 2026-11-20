@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Explorer & Favorites Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Web Data Explorer</h1>
+      <p>Search live API records and build your personal favorites list.</p>
+    </header>
+
+    <!-- Controls -->
+    <div class="controls-card">
+      <input type="text" id="search-input" placeholder="Search items by keyword..." autocomplete="off">
+      <button id="search-btn">Search</button>
+      <button id="reset-btn" class="btn-secondary">Show All</button>
+    </div>
+
+    <!-- User Feedback Message -->
+    <div id="status-msg" class="status-msg"></div>
+
+    <!-- Dual-Column Dashboard -->
+    <main class="dashboard-grid">
+      <!-- Search Results Column -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Available Items</h2>
+          <span class="badge" id="results-count">0 items</span>
+        </div>
+        <div id="results-grid" class="cards-container">
+          <!-- Dynamically populated via render() in app.js -->
+        </div>
+      </section>
+
+      <!-- Favorites Column -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2>My Favorites</h2>
+          <span class="badge badge-accent" id="favs-count">0 saved</span>
+        </div>
+        <div id="favs-list" class="cards-container">
+          <!-- Dynamically populated via render() in app.js -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
