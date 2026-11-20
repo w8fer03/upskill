@@ -81,7 +81,7 @@ async function fetchItems(filterText = "") {
   render();
 
   try {
-    const url = "https://jsonplaceholder.typicode.com/posts";
+    const url = "https://jsonplaceholder.typicode.com";
     
     // Step 1: Send request
     const response = await fetch(url);
